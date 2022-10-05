@@ -1,0 +1,11 @@
+
+Hi !
+
+1/ create a `.env.local` file
+2/ make sure you have php8.1 installed and php8.1-sqlite3 installed
+3/ Add `DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"` in `.env.local`
+4/ Create the file `data.db` in the `var` directory
+5/ create the database `bin/console doctrine:database:create`
+6/ launch the migration `bin/console doctrine:migrations:migrate`
+7/ create user via the API with post (omit the book part in the json)
+8/ create a book with this user (user is actually an author but anyway :p)
